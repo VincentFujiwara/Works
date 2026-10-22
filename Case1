@@ -1,48 +1,32 @@
-// Задачник Абрамяна - задача case1
-//
-//Дано целое число в диапазоне 1–7. Вывести строку — название дня
-//недели, соответствующее данному числу (1 — «понедельник», 2 — «вторник» и т. д.).
-// 
-// Решение Урсу Артёма
-
 #include <stdio.h>
-int main (){
+
+int main() {
 	
-	char d1,d2,d3,d4,d5,d6,d7,today;
+	int today;
 	
-	d1 = 1,d2 = 2,d3 = 3,d4 = 4,d5 = 5,d6 = 6,d7 = 7,today = 0;
-	
-	printf ("please choose № of day\n");
-	printf ("d1 = Monday\n");
-	printf ("d2 = Tuesday\n");
-	printf ("d3 = Wednesday\n");
-	printf ("d4 = Thursday\n");
-	printf ("d5 = Friday\n");
-	printf ("d6 = Saturday\n");
-	printf ("d7 = Sunday\n");
-	
-	scanf ("%c %c %c %c %c %c %c",&d1,&d2,&d3,&d4,&d5,&d6,&d7);
-	
+	printf("set number of day (1 - 7): ");
 	if (scanf("%d", &today) != 1) {
-		return 1; 
+		printf("input error!\n");
+		return 1;
 	}
-	if (today == d1) {
+	
+	if (today == 1) {
 		printf("Monday\n");
-	} else if (today == d2) {
+	} else if (today == 2) {
 		printf("Tuesday\n");
-	} else if (today == d3) {
+	} else if (today == 3) {
 		printf("Wednesday\n");
-	} else if (today == d4) {
+	} else if (today == 4) {
 		printf("Thursday\n");
-	} else if (today == d5) {
+	} else if (today == 5) {
 		printf("Friday\n");
-	} else if (today == d6) {
+	} else if (today == 6) {
 		printf("Saturday\n");
-	} else if (today == d7) {
+	} else if (today == 7) {
 		printf("Sunday\n");
 	} else {
-		printf("Not correct input!\n");
+		printf("incorrect number of day!\n");
 	}
-		
+	
 	return 0;
 }
