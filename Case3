@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main() {
+	int month;
+	
+	printf("set mouth (1 - 12): ");
+	if (scanf("%d", &month) != 1) {
+		printf("Input error.\n");
+		return 1;
+	}
+
+	if (month < 1 || month > 12) {
+		printf("Wrong, please input 1-12!\n");
+		return 1;
+	}
+	
+	switch (month) {
+		
+	case 12:
+	case 1:
+	case 2:
+		printf("Winter\n");
+		break;
+		
+	case 3:
+	case 4:
+	case 5:	
+		printf("Spring\n");
+		break;
+		
+	case 6:
+	case 7:
+	case 8:	
+		printf("Summer\n");
+		break;
+		
+	case 9:
+	case 10:
+	case 11:	
+		printf("Autumn\n");
+		break;
+	}
+	
+	return 0;
+}
